@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeToRefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.whattowear.WhatToWearFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/wtwContentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:nestedScrollingEnabled="true"
+        >
+
+        <VideoView
+            android:id="@+id/vvBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/tvPullDownToRefresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="78dp"
+            android:text="@string/ni_pull_down_to_refresh"
+            android:visibility="invisible"
+            tools:visibility="visible"
+            />
+
+        <View
+            android:id="@+id/noInternetContainer"
+            android:layout_width="0dp"
+            android:layout_height="140dp"
+            android:background="@drawable/rounded_blur_container"
+            android:layout_marginBottom="-10dp"
+            android:layout_marginHorizontal="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivNoInternet"
+            android:src="@drawable/ic_wifi"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:layout_constraintTop_toTopOf="@id/noInternetContainer"
+            app:layout_constraintStart_toStartOf="@+id/noInternetContainer"
+            app:layout_constraintEnd_toEndOf="@+id/noInternetContainer"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="10dp" />
+
+        <TextView
+            android:id="@+id/tvNoInternet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/ivNoInternet"
+            app:layout_constraintBottom_toBottomOf="@id/noInternetContainer"
+            app:layout_constraintStart_toStartOf="@id/noInternetContainer"
+            app:layout_constraintEnd_toEndOf="@+id/noInternetContainer"
+            android:text="@string/ni_message"
+            android:textSize="18sp"
+            tools:visibility="visible"
+            />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/noInternetViews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="tvPullDownToRefresh,noInternetContainer,ivNoInternet,tvNoInternet"
+            android:visibility="gone"
+            tools:visibility="visible"/>
+
+
+
+        <View
+            android:id="@+id/essentialInfoContainer"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/rounded_blur_container"
+            android:layout_marginTop="72dp"
+            android:layout_marginBottom="-10dp"
+            android:layout_marginHorizontal="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/feelsLike"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/locationName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/essentialInfoContainer"
+            app:layout_constraintStart_toStartOf="@id/essentialInfoContainer"
+            app:layout_constraintBottom_toBottomOf="@id/essentialInfoContainer"
+            app:layout_constraintEnd_toStartOf="@id/weatherIcon"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constrainedWidth="true"
+            app:layout_constrainedHeight="true"
+            android:textSize="22sp"
+            android:layout_marginStart="22dp"
+            android:layout_marginEnd="8dp"
+            tools:text="Beanie" />
+
+        <ImageView
+            android:id="@+id/weatherIcon"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintTop_toTopOf="@id/essentialInfoContainer"
+            app:layout_constraintEnd_toStartOf="@+id/temperature" />
+
+        <TextView
+            android:id="@+id/temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/essentialInfoContainer"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="27sp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="18dp"
+            tools:text="Jacket" />
+
+        <TextView
+            android:id="@+id/feelsLike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/temperature"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/essentialInfoContainer"
+            android:textSize="15sp"
+            android:layout_marginEnd="30dp"
+            tools:text="Feels like 8o" />
+
+
+
+        <View
+            android:id="@+id/outfitContainer"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/rounded_blur_container"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="-34dp"
+            android:layout_marginHorizontal="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/accessory"
+            app:layout_constraintTop_toBottomOf="@+id/essentialInfoContainer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/whatToWearLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constrainedWidth="true"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="22dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/wtw_label"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toTopOf="@id/head"
+            app:layout_constraintStart_toStartOf="@+id/outfitContainer"
+            app:layout_constraintTop_toTopOf="@id/outfitContainer"
+            app:layout_constraintEnd_toEndOf="@id/outfitContainer"
+            app:layout_constraintHorizontal_bias="0"
+            />
+
+        <TextView
+            android:id="@+id/head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginBottom="4sp"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/torso"
+            app:layout_constraintStart_toStartOf="@+id/outfitContainer"
+            app:layout_constraintTop_toBottomOf="@id/whatToWearLabel"
+            android:visibility="gone"
+            tools:visibility="visible"
+            tools:text="Jacket" />
+
+        <TextView
+            android:id="@+id/torso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginBottom="4sp"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/legs"
+            app:layout_constraintStart_toStartOf="@+id/outfitContainer"
+            app:layout_constraintTop_toBottomOf="@id/head"
+            tools:text="Pants" />
+
+        <TextView
+            android:id="@+id/legs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginBottom="4sp"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/feet"
+            app:layout_constraintStart_toStartOf="@+id/outfitContainer"
+            app:layout_constraintTop_toBottomOf="@id/torso"
+            tools:text="Pants" />
+
+        <TextView
+            android:id="@+id/feet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginBottom="4sp"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/accessory"
+            app:layout_constraintStart_toStartOf="@+id/outfitContainer"
+            app:layout_constraintTop_toBottomOf="@id/legs"
+            tools:text="Pants" />
+
+        <TextView
+            android:id="@+id/accessory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4sp"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/outfitContainer"
+            app:layout_constraintTop_toBottomOf="@id/feet"
+            android:layout_marginStart="28dp"
+            android:visibility="gone"
+            tools:visibility="visible"
+            tools:text="Pants"
+            android:layout_marginTop="4sp"/>
+
+        <View
+            android:id="@+id/additionalInfoContainer"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginHorizontal="16dp"
+            android:background="@drawable/rounded_blur_container"
+            app:layout_constraintBottom_toBottomOf="@+id/aiPressure"
+            app:layout_constraintTop_toBottomOf="@+id/outfitContainer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <com.wearcast.app.ui.fragments.whattowear.AdditionalInfoTile
+            android:id="@+id/aiHumidity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/additionalInfoContainer"
+            app:layout_constraintEnd_toStartOf="@id/aiWind"
+            app:title="@string/ai_humidity_title"
+            app:iconResource="@drawable/ic_humidity"
+            />
+
+        <com.wearcast.app.ui.fragments.whattowear.AdditionalInfoTile
+            android:id="@+id/aiWind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/aiHumidity"
+            app:layout_constraintTop_toTopOf="@id/additionalInfoContainer"
+            app:layout_constraintEnd_toStartOf="@id/aiPressure"
+            app:title="@string/ai_wind_title"
+            app:iconResource="@drawable/ic_wind"
+            />
+
+        <com.wearcast.app.ui.fragments.whattowear.AdditionalInfoTile
+            android:id="@+id/aiPressure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/aiWind"
+            app:layout_constraintTop_toTopOf="@id/additionalInfoContainer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:title="@string/ai_pressure_title"
+            app:iconResource="@drawable/ic_pressure"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvForecast"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            app:layout_constraintTop_toBottomOf="@+id/additionalInfoContainer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="horizontal"
+            tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_forecast"
+            android:layout_marginTop="12dp"
+            android:layout_marginHorizontal="16dp"
+            android:background="@drawable/rounded_blur_container"
+            android:paddingHorizontal="22dp"
+            />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/allViews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="essentialInfoContainer,locationName,weatherIcon,temperature,feelsLike,outfitContainer,whatToWearLabel,torso,legs,feet,additionalInfoContainer,aiHumidity,aiWind,aiPressure,rvForecast" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

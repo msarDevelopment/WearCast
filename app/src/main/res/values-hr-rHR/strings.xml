@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">WearCast</string>
+    <string name="ei_feelslike">Čini se kao %1$s°</string>
+    <string name="wtw_label">Što obući?</string>
+    <string name="wtw_head">Kapa</string>
+    <string name="wtw_torso_cold">Slojevito</string>
+    <string name="wtw_torso_chilly">Jakna</string>
+    <string name="wtw_torso_mild">Majica dugih rukava</string>
+    <string name="wtw_torso_hot">Majica kratkih rukava</string>
+    <string name="wtw_legs_cold">Uzeti u obzir dugo donje rublje</string>
+    <string name="wtw_legs_chilly_mild">Hlače</string>
+    <string name="wtw_legs_hot">Kratke hlače</string>
+    <string name="wtw_feet_cold">Zimske čizme</string>
+    <string name="wtw_feet_chilly_mild_hot">Cipele/Tenisice</string>
+    <string name="wtw_accessory">Kišobran</string>
+    <string name="ai_humidity_title">Vlažnost</string>
+    <string name="ai_wind_title">Vjetar</string>
+    <string name="ai_pressure_title">Pritisak</string>
+
+    <string name="ni_pull_down_to_refresh">Povucite prema dolje za osvježavanje</string>
+    <string name="ni_message">Nema internetske veze</string>
+
+    <string name="settings_label">Postavke</string>
+
+    <string name="settings_location_label">Lokacija</string>
+    <string name="settings_location_auto_label">Postavi automatski</string>
+    <string name="settings_location_location_confirmation">Lokacija postavljena na %1$s, %2$s</string>
+
+    <string name="settings_language_label">Jezik</string>
+    <string name="settings_language_english_label">Engleski</string>
+    <string name="settings_language_croatian_label">Hrvatski</string>
+
+    <string name="settings_temperatures_description">Kako bi mogao iskusiti najbolje iz aplikacije možeš po svojoj želji podesiti željene temperature za svaku odjevnu kombinaciju.</string>
+    <string name="settings_temperatures_label">Temperature</string>
+    <string name="temperatures_cold">Hladno</string>
+    <string name="temperatures_chilly">Prohladno</string>
+    <string name="temperatures_warm">Toplo</string>
+    <string name="temp_range_description_below_cold">Ispod Hladno - Zimska kombinacija</string>
+    <string name="temp_range_description_between_cold_and_chilly">Između Hladno i Prohladno - Kombinacija s jaknom</string>
+    <string name="temp_range_description_between_chilly_and_mild">Između Prohladno i Toplo - Dugi rukavi</string>
+    <string name="temp_range_description_above_mild">Iznad Toplo - Ljetna kombinacija</string>
+    <string name="settings_location_search_hint">Pretražite</string>
+    <string name="settings_temperatures_legend_label">Temperature i kombinacije</string>
+</resources>

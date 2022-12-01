@@ -1,0 +1,39 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.WearCast" parent="Theme.MaterialComponents.Light">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/black_content</item>
+        <item name="colorPrimaryVariant">@color/black_background</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:colorBackground">?attr/colorPrimaryVariant</item>
+        <item name="greyLine">@color/grey_line</item>
+        <item name="android:textColorHint">@color/low_alpha_white</item>
+        <item name="switchCheckedColor">@color/switch_checked</item>
+        <item name="switchNotCheckedColor">@color/switch_not_checked</item>
+        <item name="defaultTabSelectorDotColor">@color/dot_default</item>
+        <item name="bottomSheetColor">@color/bottom_sheet_gray</item>
+    </style>
+
+    <style name="EditTextTheme" parent="Theme.WearCast">
+        <item name="colorControlNormal">?android:textColor</item>
+        <item name="colorControlActivated">?android:textColor</item>
+        <item name="colorControlHighlight">?android:textColor</item>
+    </style>
+
+    <style name="NumberPickerTheme" parent="EditTextTheme">
+        <item name="android:textColorPrimary">@color/white</item>
+    </style>
+
+</resources>
