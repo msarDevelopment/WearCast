@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">WearCast</string>
+
+    <string name="ei_temp" translatable="false">%1$s°</string>
+    <string name="ei_feelslike">Feels like %1$s°</string>
+
+    <string name="wtw_label">What to wear?</string>
+
+    <string name="wtw_head">Beanie</string>
+
+    <string name="wtw_torso_cold">Layered</string>
+    <string name="wtw_torso_chilly">Jacket</string>
+    <string name="wtw_torso_mild">Long sleeve shirt</string>
+    <string name="wtw_torso_hot">T-shirt</string>
+
+    <string name="wtw_legs_cold">Consider long underwear</string>
+    <string name="wtw_legs_chilly_mild">Pants</string>
+    <string name="wtw_legs_hot">Short pants</string>
+
+    <string name="wtw_feet_cold">Winter boots</string>
+    <string name="wtw_feet_chilly_mild_hot">Shoes/Sneakers</string>
+
+
+    <string name="wtw_accessory">Umbrella</string>
+
+
+    <string name="ai_humidity_title">Humidity</string>
+    <string name="ai_humidity_value" translatable="false">%1$s %%</string>
+
+
+    <string name="ai_wind_title">Wind</string>
+    <string name="ai_wind_value" translatable="false">%1$s km/h</string>
+
+    <string name="ai_pressure_title">Pressure</string>
+    <string name="ai_pressure_value" translatable="false">%1$s hPa</string>
+    <string name="ni_pull_down_to_refresh">Pull down to refresh</string>
+    <string name="ni_message">There is no internet connection</string>
+
+    <string name="settings_label">Settings</string>
+
+    <string name="settings_location_label">Location</string>
+    <string name="settings_location_auto_label">Set automatically</string>
+    <string name="settings_location_location_confirmation">Location set to %1$s, %2$s</string>
+
+    <string name="settings_language_label">Language</string>
+    <string name="settings_language_english_label">English</string>
+    <string name="settings_language_croatian_label">Croatian</string>
+
+    <string name="settings_temperatures_description">In order to get the best outfit recommendations you can customize temperature ranges based on how you experience them.</string>
+    <string name="settings_temperatures_label">Temperatures</string>
+    <string name="temperatures_cold">Cold</string>
+    <string name="temperatures_chilly">Chilly</string>
+    <string name="temperatures_warm">Warm</string>
+    <string name="temp_range_description_below_cold">Below Cold - Winter outfit</string>
+    <string name="temp_range_description_between_cold_and_chilly">Between Cold and Chilly - Jacket outfit</string>
+    <string name="temp_range_description_between_chilly_and_mild">Between Chilly and Warm - Long sleeves</string>
+    <string name="temp_range_description_above_mild">Above Warm - Summer outfit</string>
+    <string name="settings_location_search_hint">Search</string>
+    <string name="settings_temperatures_legend_label">Temperatures and outfits</string>
+</resources>

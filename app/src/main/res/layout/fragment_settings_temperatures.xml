@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimaryVariant"
+        android:id="@+id/fragment_settings_temperatures_container">
+
+        <View
+            android:id="@+id/settingsTemperatureContainer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_blur_container"
+            android:layout_marginTop="72dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="96dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivTemperaturesBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/settingsTemperatureContainer"
+            app:layout_constraintStart_toStartOf="@id/settingsTemperatureContainer"
+            app:layout_constraintBottom_toBottomOf="@+id/tvTemperatureLabel"
+            android:src="@drawable/ic_back"
+            android:layout_marginTop="24dp"
+            android:paddingHorizontal="22dp"
+            android:paddingVertical="16dp"
+            />
+
+        <TextView
+            android:id="@+id/tvTemperatureLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/settingsTemperatureContainer"
+            app:layout_constraintStart_toEndOf="@id/ivTemperaturesBack"
+            app:layout_constraintBottom_toTopOf="@+id/tvTemperatureDescription"
+            android:layout_marginTop="24dp"
+            android:textSize="28sp"
+            android:text="@string/settings_temperatures_label"
+            android:fontFamily="@font/poppins_semibold"
+            />
+
+        <TextView
+            android:id="@+id/tvTemperatureDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tvTemperatureLabel"
+            app:layout_constraintStart_toStartOf="@id/settingsTemperatureContainer"
+            app:layout_constraintEnd_toEndOf="@id/settingsTemperatureContainer"
+            android:layout_marginTop="24dp"
+            android:textSize="16sp"
+            android:layout_marginStart="42dp"
+            android:layout_marginEnd="42dp"
+            android:text="@string/settings_temperatures_description"
+            android:includeFontPadding="false"
+            />
+
+        <TextView
+            android:id="@+id/tvNpColdDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/npCold"
+            app:layout_constraintTop_toBottomOf="@+id/tvTemperatureDescription"
+            app:layout_constraintEnd_toEndOf="@id/npCold"
+            app:layout_constraintBottom_toTopOf="@id/npCold"
+            android:textSize="18sp"
+            android:text="@string/temperatures_cold"
+            android:includeFontPadding="false"
+            android:layout_marginTop="24dp"
+            />
+
+        <NumberPicker
+            android:id="@+id/npCold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tvTemperatureDescription"
+            app:layout_constraintStart_toStartOf="@+id/settingsTemperatureContainer"
+            android:layout_marginTop="64dp"
+            android:layout_marginStart="22dp"
+            android:theme="@style/NumberPickerTheme"
+            />
+
+        <TextView
+            android:id="@+id/tvNpChillyDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/npChilly"
+            app:layout_constraintTop_toBottomOf="@+id/tvTemperatureDescription"
+            app:layout_constraintEnd_toEndOf="@id/npChilly"
+            app:layout_constraintBottom_toTopOf="@id/npChilly"
+            android:textSize="18sp"
+            android:text="@string/temperatures_chilly"
+            android:includeFontPadding="false"
+            android:layout_marginTop="24dp"
+            />
+
+        <NumberPicker
+            android:id="@+id/npChilly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tvTemperatureDescription"
+            app:layout_constraintStart_toEndOf="@+id/npCold"
+            app:layout_constraintEnd_toStartOf="@+id/npWarm"
+            android:layout_marginTop="64dp"
+            android:theme="@style/NumberPickerTheme"
+            />
+
+        <TextView
+            android:id="@+id/tvNpWarmDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/npWarm"
+            app:layout_constraintTop_toBottomOf="@+id/tvTemperatureDescription"
+            app:layout_constraintEnd_toEndOf="@id/npWarm"
+            app:layout_constraintBottom_toTopOf="@id/npWarm"
+            android:textSize="18sp"
+            android:text="@string/temperatures_warm"
+            android:includeFontPadding="false"
+            android:layout_marginTop="24dp"
+            />
+
+        <NumberPicker
+            android:id="@+id/npWarm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tvTemperatureDescription"
+            app:layout_constraintEnd_toEndOf="@+id/settingsTemperatureContainer"
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="22dp"
+            android:theme="@style/NumberPickerTheme"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomSheet"
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+        android:background="@drawable/bottom_sheet_background"
+        android:orientation="vertical"
+        android:gravity="center|top"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_rectangle"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/tvLegendLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:textSize="16sp"
+            android:layout_marginStart="42dp"
+            android:layout_marginEnd="42dp"
+            android:text="@string/settings_temperatures_legend_label"
+            android:includeFontPadding="false"
+            android:fontFamily="@font/poppins_extrabold"
+            />
+
+        <TextView
+            android:id="@+id/tvTempRangeDescriptionBelowCold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:textSize="12sp"
+            android:layout_marginStart="42dp"
+            android:layout_marginEnd="42dp"
+            android:text="@string/temp_range_description_below_cold"
+            android:includeFontPadding="false"
+            />
+
+        <TextView
+            android:id="@+id/tvTempRangeDescriptionBetweenColdAndChilly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textSize="12sp"
+            android:layout_marginStart="42dp"
+            android:layout_marginEnd="42dp"
+            android:text="@string/temp_range_description_between_cold_and_chilly"
+            android:includeFontPadding="false"
+            />
+
+        <TextView
+            android:id="@+id/tvTempRangeDescriptionBetweenChillyAndMild"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textSize="12sp"
+            android:layout_marginStart="42dp"
+            android:layout_marginEnd="42dp"
+            android:text="@string/temp_range_description_between_chilly_and_mild"
+            android:includeFontPadding="false"
+            />
+
+        <TextView
+            android:id="@+id/tvTempRangeDescriptionAboveMild"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textSize="12sp"
+            android:layout_marginStart="42dp"
+            android:layout_marginEnd="42dp"
+            android:text="@string/temp_range_description_above_mild"
+            android:includeFontPadding="false"
+            />
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

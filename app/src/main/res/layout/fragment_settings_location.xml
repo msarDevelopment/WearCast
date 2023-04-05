@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorPrimaryVariant"
+    android:id="@+id/fragment_settings_temperatures_container"
+    android:paddingBottom="40dp">
+
+    <View
+        android:id="@+id/settingsLocationContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/rounded_blur_container"
+        android:layout_marginTop="72dp"
+        android:layout_marginHorizontal="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivLocationBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/settingsLocationContainer"
+        app:layout_constraintStart_toStartOf="@id/settingsLocationContainer"
+        app:layout_constraintBottom_toBottomOf="@+id/tvLocationLabel"
+        android:src="@drawable/ic_back"
+        android:layout_marginTop="24dp"
+        android:paddingHorizontal="22dp"
+        android:paddingVertical="16dp"
+        />
+
+    <TextView
+        android:id="@+id/tvLocationLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/settingsLocationContainer"
+        app:layout_constraintStart_toEndOf="@id/ivLocationBack"
+        android:layout_marginTop="24dp"
+        android:textSize="28sp"
+        android:fontFamily="@font/poppins_semibold"
+        tools:text="Location"
+        android:text="@string/settings_location_label"/>
+
+    <TextView
+        android:id="@+id/tvSetAuto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvLocationLabel"
+        app:layout_constraintStart_toStartOf="@id/settingsLocationContainer"
+        android:layout_marginTop="24dp"
+        android:textSize="18sp"
+        android:fontFamily="@font/poppins_semibold"
+        android:layout_marginStart="22dp"
+        tools:text="Set automatically"
+        android:text="@string/settings_location_auto_label"/>
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/swAutoLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/tvSetAuto"
+        app:layout_constraintBottom_toBottomOf="@+id/tvSetAuto"
+        app:layout_constraintEnd_toEndOf="@id/settingsLocationContainer"
+        android:layout_marginEnd="22dp"
+        app:track="@drawable/switch_auto_location_track"
+        android:thumb="@drawable/switch_auto_location_thumb"
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:scaleX="0.9"
+        android:scaleY="0.9"
+        />
+
+    <EditText
+        android:id="@+id/etSearchBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tvSetAuto"
+        app:layout_constraintStart_toStartOf="@id/settingsLocationContainer"
+        app:layout_constraintEnd_toEndOf="@id/settingsLocationContainer"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="42dp"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:drawableStart="@drawable/ic_search"
+        android:textColor="?android:attr/textColor"
+        android:maxLines="1"
+        android:drawablePadding="20dp"
+        android:theme="@style/EditTextTheme"
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        android:textSize="18sp"
+        android:paddingBottom="16dp"
+        android:hint="@string/settings_location_search_hint"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/rvSearchResults"
+        app:layout_constraintStart_toStartOf="@id/settingsLocationContainer"
+        app:layout_constraintTop_toBottomOf="@+id/etSearchBar"
+        app:layout_constraintEnd_toEndOf="@id/settingsLocationContainer"
+        android:visibility="gone"
+        tools:visibility="visible"
+        tools:listitem="@layout/item_search_result"
+        tools:itemCount="5"
+        android:layout_marginTop="4dp"
+        android:paddingHorizontal="22dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
